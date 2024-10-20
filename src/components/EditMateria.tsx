@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
-const URI = "https://prueba-backend-72hk.onrender.com";
+const URI = "https://prueba-backend-72hk.onrender.com/api/materias/";
 
 const editMateria = () => {
     const[materia, setMateria]=useState({nombre:'', mat_semestre:'', profesor:''});
