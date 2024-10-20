@@ -22,7 +22,7 @@ const CreateMateria = () => {
             <h1>Crear Materia</h1>
             <form onSubmit={store}>
                 <div className="mb-3">
-                    <label htmlFor="nombre" className="form-label">Nombre</label>
+                    <label htmlFor="nombre" className="form-label">Nombre kuak</label>
                     <input type="text" className="form-control" id="nombre" onChange={(e)=>setNombre(e.target.value)} />
                 </div>
                 <div className="mb-3">
