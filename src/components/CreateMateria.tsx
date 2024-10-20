@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const URI = "http://localhost:8000/api/materias";
+const URI = "https://prueba-backend-72hk.onrender.com";
 
 const CreateMateria = () => {
    const[nombre, setNombre]=useState('');
