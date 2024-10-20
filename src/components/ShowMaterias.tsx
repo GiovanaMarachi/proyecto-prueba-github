@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const URI='https://prueba-backend-72hk.onrender.com';
+const URI='https://prueba-backend-72hk.onrender.com/api/materias/';
 
 const ShowMaterias = () => {
     const [materias, setMaterias]=useState([]);
