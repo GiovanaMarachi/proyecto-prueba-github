@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const URI = "http://localhost:8000/api/materias";
+const URI = "https://prueba-backend-72hk.onrender.com/api/materias";
 
 const CreateMateria = () => {
    const[nombre, setNombre]=useState('');
@@ -13,7 +13,15 @@ const CreateMateria = () => {
 
     const store =async(e:any)=>{
         e.preventDefault();
-        await axios.post(URI, {nombre:nombre, mat_semestre:semestre, profesor:profesor});
+        const {data} = await axios.post(URI, {nombre:nombre, mat_semestre:semestre, profesor:profesor},
+            {
+                headers:{
+                    'Content-Type':'application/json'
+                }
+            }
+        )
+        console.log(data);
+        
         navigate('/');
     }   
 
