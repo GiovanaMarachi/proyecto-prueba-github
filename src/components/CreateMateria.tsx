@@ -13,7 +13,14 @@ const CreateMateria = () => {
 
     const store =async(e:any)=>{
         e.preventDefault();
-        await axios.post(URI, {nombre:nombre, mat_semestre:semestre, profesor:profesor});
+        axios.post(URI, {nombre:nombre, mat_semestre:semestre, profesor:profesor}).then(data=>{
+            if(data) {
+                console.log(data);
+                
+            }
+        }).catch((err)=>{
+            console.warn(err)
+        });
         navigate('/');
     }   
 
